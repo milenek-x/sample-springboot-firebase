@@ -10,23 +10,24 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/tasks")
+@CrossOrigin(origins = "http://localhost:8080")
 public class TaskController {
     @Autowired
     private TaskService taskService;
 
     @PostMapping()
-    public ResponseEntity<String> addBook(@RequestBody Task task){
+    public ResponseEntity<String> addTask(@RequestBody Task task){
         return ResponseEntity.ok(taskService.addTask(task));
     }
 
     @GetMapping()
-    public ResponseEntity<List<Task>> getAllBooks() {
+    public ResponseEntity<List<Task>> getAllTasks() {
         List<Task> tasks = taskService.getAllTasks();
         return ResponseEntity.ok(tasks);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Task> getBookById(@PathVariable String id) {
+    public ResponseEntity<Task> getTaskById(@PathVariable String id) {
         Task task = taskService.getTaskById(id);
         if (task != null) {
             return ResponseEntity.ok(task);
