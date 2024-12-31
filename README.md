@@ -17,7 +17,8 @@ This tutorial provides a step-by-step guide for creating a Spring Boot backend a
 
 1. Go to [Spring Initializr](https://start.spring.io/).
 2. Select the following options as in the image:
-   
+   ![{66D65AAD-399E-477F-8C0D-1D0E362C44E8}](https://github.com/user-attachments/assets/92bdabeb-f826-4468-afd8-c3864031f672)
+
 3. Click on the **Generate** button to download your project as a ZIP file.
 5. Extract the ZIP file and open it in your preferred IDE.
 
